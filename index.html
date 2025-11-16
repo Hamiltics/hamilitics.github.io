@@ -8,41 +8,25 @@
     html, body {
       height: 100%;
       margin: 0;
+      padding: 0;
+      overflow: hidden; /* prevents scrolling */
     }
 
     body {
-      background-color: #e3d6f7; /* your purple */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: url("landing.png") no-repeat center center fixed;
+      background-size: cover; /* make image fill entire screen */
     }
 
-    .wrapper {
-      text-align: center;
-    }
-
-    .logo {
-      font-size: 3rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact {
-      font-size: 1.1rem;
+    /* Make the whole page a clickable email link */
+    a.fullscreen-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="logo">Hamilitics</div>
-    <div class="tagline">Systems and Data</div>
-    <div class="contact">Contact: <a href="mailto:paige@hamilitics.co.nz">paige@hamilitics.co.nz</a></div>
-  </div>
+  <a class="fullscreen-link" href="mailto:paige@hamilitics.co.nz"></a>
 </body>
 </html>
